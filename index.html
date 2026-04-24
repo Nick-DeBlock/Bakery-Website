@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        background: #88AB8E;
+        color: white;
+        padding: 40px 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .order {
+        background: #ffffff;
+        padding: 5px 20px;
+        border-radius: 5px;
+        color: black;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        min-height: 80vh;
+    }
+
+    footer {
+        background: #494949;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* This is the styling for the grid */
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 50px;
+        padding-left: 200px;
+        padding-right: 200px;
+        column-gap: 150px;
+    }
+    .container div {
+        /* border: 1px solid black; */
+        font-size: 30px;
+        text-align: center;
+        height: 500px;
+        
+    }
+
+    .container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        color: #ffffff;
+        font-size: 50px;
+    }
+
+    p{
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    #orderbanner{
+    background: #88AB8E;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    #orderbanner a{
+        background: #ffffff;
+        width: 100px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 3px;
+        padding: 10px;
+    }
+    
+    #gallary{
+        width: 100%;
+        height: auto; /* adjust as needed */
+
+        background-image: url('images/background.png');
+        background-size: 100vw;
+        background-position: bottom center; /* anchors image to bottom */
+        background-repeat: no-repeat;
+
+        text-align: center;
+    }
+
+    .container2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 100px;
+        padding: 50px;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    
+    .container2 div {
+        /* border: 1px solid black; */
+        font-size: 30px;
+        text-align: center;
+        height: 400px;
+    }
+
+    .container2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+        
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Chestnut Hill Bakery</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="order.html" class="order">Place an Order</a>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <div><img src="images/img1.jpg" alt="Image 1"></div>
+        <div>
+            <h1>
+                Your Local Bakery in Lynchburg, VA
+
+            </h1>
+            <p>
+                Looking for the most delicious and fresh baked goods that Virginia has to offer? Chestnut Hill Bakery is Lynchburg"s premier bakery. We are proud to offer the best cakes and pies within 100 miles-people even visit from out of state to get a taste of our baked goods! With fresh-baked sweets daily, what isn"t there to love? Everything at our bakery is homemade, even the frosting. Surprise a loved one with a handcrafted treat from Chestnut Hill Bakery!
+                For your convenience, we also offer delivery services. When you are placing an order, please let someone know that you would like to use our delivery services.
+            </p>
+        </div>
+
+        <div><h1>
+                Half a Century of Indulgence
+
+            </h1>
+            <p>
+                For more than half a century, residents of Lynchburg, VA, and beyond have chosen us when they need something sweet. We opened our bakery more than 50 years ago on Fort Avenue, and we continue to handcraft all of our goodies there to this day. Our bakers still use our old-time family recipes that made us beloved all those years ago. Take a look at our menu to get an idea of all that we can create!
+            </p></div>
+        <div><img src="images/img2.jpg" alt="Image 1"></div>
+    </div>
+
+    <div id="orderbanner">
+        <h2>Place An Order Here</h2>
+        <a href="order.html">Order</a>
+
+    </div>
+
+    <div id="gallary" >
+        <h1>
+            See Our Delicious Creations
+        </h1>
+        <div class="container2">
+            <div><img src="images/img1.jpg" alt="Gallery Image 1"></div>
+            <div><img src="images/img1.jpg" alt="Gallery Image 1"></div>
+            <div><img src="images/img1.jpg" alt="Gallery Image 1"></div>
+            <div><img src="images/img1.jpg" alt="Gallery Image 1"></div>
+            <div><img src="images/img1.jpg" alt="Gallery Image 1"></div>
+            <div><img src="images/img1.jpg" alt="Gallery Image 1"></div>
+        </div>
+        
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 Chestnut Hill Bakery</p>
+</footer>
+
+</body>
+</html>
