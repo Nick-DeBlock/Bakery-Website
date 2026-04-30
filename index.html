@@ -3,27 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/rbf7dxk.css">
 <title>Home</title>
 
 <style>
     body {
         margin: 0;
-        font-family: Arial, sans-serif;
+        font-family: 'Cormorant Garamond', serif;
     }
 
     header {
-        background: #88AB8E;
+        background: #6b7a67;
         color: white;
-        padding: 40px 20px;
+        padding-right: 20px;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .logo {
-        font-size: 20px;
-        font-weight: bold;
+    .logo img{
+        width: 200px;
     }
 
     .order {
@@ -53,6 +57,32 @@
         color: white;
         text-align: center;
         padding: 10px;
+    }
+
+    /* This is the styling for the ad banner */
+    #ad-banner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #ad-banner img {
+        width: 100%;
+        height: auto;   /* key change */
+        display: block;
+    }
+
+    #ad-banner button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+    }
+
+    #ad-banner.hidden {
+        height: 0;
+        padding: 0;
+        overflow: hidden;
     }
 
     /* This is the styling for the grid */
@@ -86,7 +116,7 @@
     }
     h2{
         color: #ffffff;
-        font-size: 50px;
+        font-size: 40px;
     }
 
     p{
@@ -95,30 +125,34 @@
     }
 
     #orderbanner{
-    background: #88AB8E;
-    height: 250px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        background: #6b7a67;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
     }
 
     #orderbanner a{
         background: #ffffff;
-        width: 100px;
+        color: #000000;
+        width: auto;
         text-decoration: none;
         text-align: center;
         font-weight: bold;
         border-radius: 3px;
         padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-decoration: none;
     }
     
     #gallary{
         width: 100%;
         height: auto; /* adjust as needed */
 
-        background-image: url('images/background.png');
+        background-image: url('background.png');
         background-size: 100vw;
         background-position: bottom center; /* anchors image to bottom */
         background-repeat: no-repeat;
@@ -148,15 +182,54 @@
         object-fit: cover;
         display: block;
     }
+
+    #socials{
+        background: #ffffff;
+        height: 250px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+    }
+
+    #socials a{
+        background: #6b7a67;
+        color: #ffffff;
+        width: auto;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 3px;
+        padding: 10px;
+        text-decoration: none;
+        margin-bottom: 12px;
+
+    }
+    .socialtext{
+        color: #000000;
+        font-family: "beloved-script", sans-serif;
+        font-style: bold;
+        /* margin-bottom: -10px; */
+        font-size: 40px;
+    }
         
 
 </style>
+
+<script>
+    function closeBanner() {
+        document.getElementById("ad-banner").classList.add("hidden");
+    }
+</script>
+
 </head>
 
 <body>
 
 <header>
-    <div class="logo">Chestnut Hill Bakery</div>
+    <div class="logo"><img src="logo.png" alt="logo"></div>
 
     <nav>
         <a href="index.html">Home</a>
@@ -166,6 +239,11 @@
 </header>
 
 <main>
+    <div id="ad-banner">
+        <img src="Add(2).png" alt="Advertisement">
+        <button onclick="closeBanner()">✖</button>
+    </div>
+
     <div class="container">
         <div><img src="img1.jpg" alt="Image 1"></div>
         <div>
@@ -206,9 +284,17 @@
             <div><img src="img1.jpg" alt="Gallery Image 1"></div>
             <div><img src="img1.jpg" alt="Gallery Image 1"></div>
             <div><img src="img1.jpg" alt="Gallery Image 1"></div>
-            
+
         </div>
         
+    </div>
+
+    <div id="socials">
+        <p class="socialtext">Want to see more?</p>
+        
+        <a href="https://www.facebook.com/chestnut.hillbakery/"><i class="fa-brands fa-facebook-f"></i>   Follow Us on Facebook</a>
+
+        <a href="https://www.facebook.com/chestnut.hillbakery/"><i class="fa-brands fa-instagram"></i>   Follow Us on Instagram</a>
     </div>
 
 </main>
